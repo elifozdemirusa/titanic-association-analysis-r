@@ -1,39 +1,32 @@
-# Titanic Survival Association Analysis (R)
+# Titanic Association Analysis (Apriori in R)
 
-This project analyzes Titanic passenger survival patterns using
-association rule mining (Apriori algorithm) in R.
+This project demonstrates association rule mining using the Apriori algorithm on the classic Titanic dataset.
 
-##  Objective
-To discover meaningful relationships between passenger attributes
-(Class, Sex, Age) and survival outcomes.
+The goal is to explore hidden relationships between passenger characteristics (class, sex, age) and survival outcomes, using interpretable rule-based analytics.
+
+## What This Project Shows
+- Data transformation from aggregated format to transactional data
+- Association rule mining using Apriori
+- Rule evaluation using support, confidence, and lift
+- Redundant rule pruning
+- Rule visualization for interpretability
+
+## Dataset
+- Built-in `Titanic` dataset from base R
+- Reconstructed so that each row represents an individual passenger
 
 ## Tools & Libraries
 - R
-- arules
-- arulesViz
+- `arules`
+- `arulesViz`
 
-## Dataset
-- Titanic dataset (built-in R dataset)
+## Key Insights (Examples)
+- Female passengers in higher classes show strong association with survival
+- Male passengers in lower classes are strongly associated with non-survival
+- Lift-based ranking highlights the most meaningful survival patterns
 
-##  Methodology
-- Data preprocessing
-- Association rule mining (Apriori)
-- Rule pruning (removal of redundant rules)
-- Visualization of rules
+## Files
+- `titanic_apriori_analysis.R` — complete analysis pipeline
 
-## Key Findings
-- Female passengers in 1st class had a very high survival probability  
-- Key rule: `{Class=1st, Sex=Female} → {Survived=Yes}`  
-  - Confidence ≈ 97%  
-  - Lift ≈ 3.0  
-
-##  How to Run
-```r
-install.packages(c("arules", "arulesViz"))
-source("titanic_analysis.R")
-
-Author
-
+## Author
 Elif Ozdemir
-Business Analytics
-
